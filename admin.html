@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking History - Hair Haven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Booking History</h2>
+    <div id="historyList"></div>
+    <a href="index.html" class="back-link">⬅ Back to Dashboard</a>
+  </div>
+  <script>
+    const history = JSON.parse(localStorage.getItem("bookings")) || [];
+    const list = document.getElementById("historyList");
+    list.innerHTML = history.map(b =>
+      `<div><strong>${b.name}</strong> booked ${b.service} with ${b.staff} on ${b.date} at ${b.time}</div>`
+    ).join('');
+  </script>
+</body>
+</html>

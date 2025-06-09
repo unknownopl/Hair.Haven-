@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Appointment - Hair Haven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Book an Appointment</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <select id="service" required>
+        <option disabled selected>Select Service</option>
+        <option value="Hair Cut">Hair Cut – 200৳</option>
+        <option value="Facial">Facial – 300৳</option>
+        <option value="Spa">Spa – 500৳</option>
+      </select>
+      <input type="date" id="date" required>
+      <input type="time" id="time" required>
+      <select id="staff" required>
+        <option disabled selected>Select Staff</option>
+        <option value="Rakib">Rakib</option>
+        <option value="Sumon">Sumon</option>
+        <option value="Akib">Akib</option>
+      </select>
+      <input type="text" id="referral" placeholder="Referral Code (optional)">
+      <button type="submit">Confirm Booking</button>
+    </form>
+    <a href="index.html" class="back-link">⬅ Back to Dashboard</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
